@@ -1,3 +1,9 @@
+/**
+ * program to Display the Student Details
+ * @author Devaraju
+ * @since 26th July 2023
+ */
+
 package com.techzenure.day5;
 
 public class Student {

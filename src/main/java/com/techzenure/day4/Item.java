@@ -1,3 +1,9 @@
+/**
+ * program to find Least Discount Item in Shopping Cart
+ * @author Devaraju
+ * @since 26th July 2023
+ */
+
 package com.techzenure.day4;
 
 class Item {

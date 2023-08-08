@@ -1,3 +1,10 @@
+/**
+ * program to Generate Movie Ticket bill based on Seats Selection
+ * @author Devaraju
+ * @since 26th July 2023
+ */
+
+
 package com.techzenure.day3;
 
 import java.util.Scanner;

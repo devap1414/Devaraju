@@ -1,3 +1,9 @@
+/**
+ * program to generate bill based on items
+ * @author Devaraju
+ * @since 26th July 2023
+ */
+
 package com.techzenure.day1and2;
 
 import java.util.Scanner;
@@ -37,7 +43,7 @@ public class BillGeneration {
 		System.out.printf("Total Price = %.2f\n", totalPrice);
 		System.out.println("ENJOY THE SHOW!!!");
 		sc.close();
-
+		//tab
 	}
 
 }

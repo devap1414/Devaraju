@@ -1,3 +1,9 @@
+/**
+ * program to Calculate Ticket Price - Static
+ * @author Devaraju
+ * @since 26th July 2023
+ */
+
 package com.techzenure.day5;
 
 import java.util.Scanner;
