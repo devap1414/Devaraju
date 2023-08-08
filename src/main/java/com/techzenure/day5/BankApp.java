@@ -26,13 +26,14 @@ public class BankApp {
 			System.out.print("enter an option: ");
 			int opt = sc.nextInt();
 			
-			int accType = 0;
+			//boolean accTypeIs = false;
 			
 			switch(opt) {
 			 case 1:
 				 if(acc == null) {
 					 System.out.print("Enter type of a/c [1.Savings | 2.Current]: ");
-					 accType = sc.nextInt();
+					 int accType = sc.nextInt();
+					 
 					 
 					 System.out.print("enter a/c no: ");
 					 long acno = sc.nextLong();
@@ -44,19 +45,24 @@ public class BankApp {
 					 System.out.print("enter initial deposit Rs: ");
 					 float amt = sc.nextFloat();
 					 
+					 //System.out.println(accType);
+					 
 					 if(accType == 1) {
 						 System.out.print("enter rate of intrest: ");
 						 float roi = sc.nextFloat();
 						 acc = new SavingsAccount(acno, name, amt, roi);
+						 //accTypeIs = acc instanceof SavingsAccount;
+						 
 					 }else {
 						 acc = new CurrentAccount(acno, name, amt);
 					 }
 					 //-- create an instance of Account type
-					 acc = new Account(acno, name, amt);
+					 //acc = new Account(acno, name, amt);
 					 System.out.println("WELCOME TO STATE BANK OF INDIA--------");
 				 }else
 					 System.out.println("A/C IS ALREADY WITH US --- PLEASE DO ANY OTHER OPERATIONS");
 				 break;
+				 
 			 case 2:
 				 if(acc != null) {
 					 System.out.print("enter amount to deposit: ");
@@ -66,6 +72,7 @@ public class BankApp {
 					 System.err.println("PLEASE OPEN AN A/C WITH US");
 				 }				 
 				 break;
+				 
 			 case 3:
 				 if(acc != null) {
 					 System.out.print("enter amount to withdraw: ");
@@ -75,6 +82,7 @@ public class BankApp {
 					 System.err.println("PLEASE OPEN AN A/C WITH US");
 				 }				 
 				 break;
+				 
 			 case 4:
 				 if(acc != null) {
 					acc.getBalance(); 
@@ -82,10 +90,12 @@ public class BankApp {
 					 System.err.println("PLEASE OPEN AN A/C WITH US");
 				 }
 				 break;
+				 
 			 case 5:
 				 if (acc instanceof SavingsAccount) {
 					 ((SavingsAccount)acc).calculateIntrest();
 				 }else {
+					 //System.out.println(acc instanceof SavingsAccount);
 					 System.err.println("This Account Will Not Be Having This Service");
 				 }
 				 break;
@@ -102,7 +112,7 @@ public class BankApp {
 				 System.out.println("application designed & developed by ");
 				 System.out.println("\t team@techzenure");
 				 sc.close();
-				 System.exit(0); // to terminate the program execution
+				 System.exit(0); 
 				 break;
 			 default:
 				 System.out.println("$$$--- INVALID SELECTION --- TRY AGAIN ---$$$");
